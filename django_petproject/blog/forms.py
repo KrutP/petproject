@@ -6,6 +6,7 @@ from captcha.fields import CaptchaField
 
 from .models import *
 
+
 class AddPostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

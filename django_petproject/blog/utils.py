@@ -7,6 +7,7 @@ menu = [{'title': "About", 'url_name': 'about'},
         {'title': "Contact", 'url_name': 'contact'},
 ]
 
+
 class DataMixin:
     paginate_by = 10
 

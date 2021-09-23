@@ -12,6 +12,7 @@ from .forms import *
 from .models import *
 from .utils import *
 
+
 class BlogHome(DataMixin, ListView):
     model = Blog
     template_name = 'blog/index.html'
@@ -24,8 +25,6 @@ class BlogHome(DataMixin, ListView):
 
     def get_queryset(self):
         return Blog.objects.filter(is_published=True).select_related('cat')
-
-
 
 
 def about(request):
@@ -140,3 +139,5 @@ class LoginUser(DataMixin, LoginView):
 def logout_user(request):
     logout(request)
     return redirect('login')
+
+
